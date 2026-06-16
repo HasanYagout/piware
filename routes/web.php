@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Middleware\SetLocale;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Redirect;
@@ -10,9 +12,9 @@ use Illuminate\Support\Facades\Session;
 
 Route::middleware([SetLocale::class])->group(function () {
 
-    Route::get('/', function () {
-        return view('home');
-    });
+    Route::get('/', [HomeController::class, 'index']);
+    Route::get('/project/view/{slug}', [ProjectController::class, 'view'])->name('project.view');
+    Route::get('/blogs/index', [\App\Http\Controllers\BlogController::class, 'index'])->name('blog.index');
 
     Route::get('/services', function () {
         return view('services');
