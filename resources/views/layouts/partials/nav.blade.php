@@ -1,4 +1,4 @@
-<nav class="fixed w-full z-50 bg-white/20 backdrop-blur-md border-b border-white/40 shadow-lg">
+<nav class="w-full z-50 bg-white/20 backdrop-blur-md border-b border-white/40 shadow-lg">
     <div class="max-w-7xl mx-auto px-6 lg:px-12 py-3 flex items-center justify-between">
         <!-- Logo + Nav Links -->
         <div class="flex items-center space-x-3">

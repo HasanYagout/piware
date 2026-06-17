@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Middleware\SetLocale;
@@ -13,8 +14,11 @@ use Illuminate\Support\Facades\Session;
 Route::middleware([SetLocale::class])->group(function () {
 
     Route::get('/', [HomeController::class, 'index']);
+    Route::post('/contact', [HomeController::class, 'store'])->name('contact.store');
     Route::get('/project/view/{slug}', [ProjectController::class, 'view'])->name('project.view');
-    Route::get('/blogs/index', [\App\Http\Controllers\BlogController::class, 'index'])->name('blog.index');
+    Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+    Route::get('/blog/category/{category}', [BlogController::class, 'category'])->name('blog.category');
+    Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 
     Route::get('/services', function () {
         return view('services');
@@ -30,9 +34,6 @@ Route::middleware([SetLocale::class])->group(function () {
 
 });
 
-// Route::get('/protofolio', function () {
-//     return view('protofolio');
-// });
 
 
 

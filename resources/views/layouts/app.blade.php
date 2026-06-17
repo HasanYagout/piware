@@ -7,27 +7,23 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="{{ asset('logo.ico') }}">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-
-    <!-- Change these lines to use CDN -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
-    <!-- Change this line to use CDN -->
     <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
 </head>
 <body>
 @include('layouts.partials.nav')
 
+<!-- MAIN CONTENT -->
 @yield('content')
 
 @include('layouts.partials.footer')
 
 <script>
-    // Initialize AOS FIRST before other scripts
     document.addEventListener('DOMContentLoaded', function() {
         // Initialize AOS
         if (typeof AOS !== 'undefined') {
@@ -35,10 +31,8 @@
                 duration: 800,
                 once: true,
                 offset: 100,
-                disable: 'mobile' // Disable on mobile if needed
+                disable: 'mobile'
             });
-        } else {
-            console.error('AOS is not loaded');
         }
 
         // Handle splash screen
@@ -77,7 +71,6 @@
         }
     });
 
-    // Refresh AOS on window resize
     window.addEventListener('resize', function() {
         if (typeof AOS !== 'undefined') {
             AOS.refresh();

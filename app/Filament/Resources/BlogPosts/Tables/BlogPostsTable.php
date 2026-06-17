@@ -9,6 +9,8 @@ use Filament\Actions\ViewAction;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Filters\TernaryFilter;
 use Filament\Tables\Table;
 
 class BlogPostsTable
@@ -17,11 +19,11 @@ class BlogPostsTable
     {
         return $table
             ->columns([
+                ImageColumn::make('featured_image')
+                    ->circular(),
                 TextColumn::make('title')
-                    ->searchable(),
-                TextColumn::make('slug')
-                    ->searchable(),
-                ImageColumn::make('featured_image'),
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('category')
                     ->searchable(),
                 TextColumn::make('published_at')
@@ -33,13 +35,12 @@ class BlogPostsTable
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                //
+                SelectFilter::make('category'),
+                TernaryFilter::make('is_published')
+                    ->label('Published')
+                    ->boolean(),
             ])
             ->recordActions([
                 ViewAction::make(),
