@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Session;
 Route::middleware([SetLocale::class])->group(function () {
 
     Route::get('/', [HomeController::class, 'index']);
+    Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('about-us');
     Route::post('/contact', [HomeController::class, 'store'])->name('contact.store');
     Route::get('/project/view/{slug}', [ProjectController::class, 'view'])->name('project.view');
     Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
@@ -24,9 +25,7 @@ Route::middleware([SetLocale::class])->group(function () {
         return view('services');
     })->name('services');
 
-    Route::get('/projects', function () {
-        return view('projects');
-    })->name('projects');
+    Route::get('/projects', [ProjectController::class,'index'])->name('projects');
 
     Route::get('/team', function () {
         return view('team');

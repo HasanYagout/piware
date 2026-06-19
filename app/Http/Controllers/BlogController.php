@@ -23,18 +23,9 @@ class BlogController extends Controller
     }
     public function show($slug)
     {
-        $post = BlogPost::where('slug', $slug)
-            ->published()
-            ->firstOrFail();
+        $post = BlogPost::where('slug', $slug)->firstOrFail();
+        return view('blog.show', compact('post'));
 
-        // Get related posts (same category)
-        $relatedPosts = BlogPost::published()
-            ->where('id', '!=', $post->id)
-            ->where('category', $post->category)
-            ->limit(3)
-            ->get();
-
-        return view('blog.show', compact('post', 'relatedPosts'));
     }
     public function category($category)
     {

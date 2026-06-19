@@ -7,7 +7,9 @@ use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
 use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Table;
 
 class ClientsTable
@@ -16,25 +18,11 @@ class ClientsTable
     {
         return $table
             ->columns([
-                TextColumn::make('name')
-                    ->searchable(),
-                TextColumn::make('logo')
-                    ->searchable(),
-                TextColumn::make('website')
-                    ->searchable(),
-                TextColumn::make('sort_order')
-                    ->numeric()
-                    ->sortable(),
-                IconColumn::make('is_featured')
-                    ->boolean(),
-                TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                ImageColumn::make('image')
+                    ->disk('public')
+                ->imageSize(100)
+                ->circular(),
+                ToggleColumn::make('status')
             ])
             ->filters([
                 //

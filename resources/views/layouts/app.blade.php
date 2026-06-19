@@ -11,7 +11,7 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+{{--    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>--}}
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>

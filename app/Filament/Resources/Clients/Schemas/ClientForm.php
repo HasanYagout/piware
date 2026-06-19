@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Clients\Schemas;
 
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Toggle;
@@ -13,19 +14,12 @@ class ClientForm
     {
         return $schema
             ->components([
-                TextInput::make('name')
+                FileUpload::make('image')
+                    ->image()
+                    ->directory('clients')
+                    ->disk('public')
                     ->required(),
-                Textarea::make('description')
-                    ->columnSpanFull(),
-                TextInput::make('logo'),
-                TextInput::make('website')
-                    ->url(),
-                TextInput::make('sort_order')
-                    ->required()
-                    ->numeric()
-                    ->default(0),
-                Toggle::make('is_featured')
-                    ->required(),
+
             ]);
     }
 }
