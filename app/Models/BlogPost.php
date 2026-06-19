@@ -9,7 +9,7 @@ use Spatie\Translatable\HasTranslations;
 class BlogPost extends Model
 {
     use HasTranslations;
-    protected $translatable = ['title'];
+    protected $translatable = ['title','excerpt','content','sections','category'];
     protected $fillable = [
         'title',
         'slug',
