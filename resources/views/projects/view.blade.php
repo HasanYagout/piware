@@ -104,8 +104,9 @@
         function openLightbox(index) {
             currentIndex = index;
             updateLightbox();
-            document.getElementById('lightbox').classList.remove('hidden');
-            document.getElementById('lightbox').style.display = 'flex';
+            const el = document.getElementById('lightbox');
+            el.classList.remove('hidden');
+            el.style.display = 'flex';
         }
 
         function updateLightbox() {
@@ -118,7 +119,9 @@
         }
 
         function closeLightbox() {
-            document.getElementById('lightbox').classList.add('hidden');
+            const el = document.getElementById('lightbox');
+            el.classList.add('hidden');
+            el.style.display = 'none';
         }
 
         function prevImage() {
