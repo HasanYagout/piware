@@ -4,6 +4,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Middleware\SetLocale;
+use App\Models\BlogPost;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
@@ -35,7 +36,10 @@ Route::middleware([SetLocale::class])->group(function () {
 });
 
 
-
+Route::get('/test', function () {
+    $post = BlogPost::find(1);
+    dd($post->sections);
+});
 
 
 Route::post('/message', [MessageController::class,'store'])->name('message.store');

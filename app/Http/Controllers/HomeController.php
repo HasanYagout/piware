@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BlogPost;
 use App\Models\Contact;
 use App\Models\Project;
 use Illuminate\Http\Request;
@@ -13,6 +14,7 @@ class HomeController extends Controller
     public function index()
     {
         $data['projects']=Project::published()->get();
+        $data['blogs']=BlogPost::published()->latest()->take(3)->get();
         return view('protofolio',$data);
     }
 

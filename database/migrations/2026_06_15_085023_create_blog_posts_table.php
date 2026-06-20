@@ -17,6 +17,9 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->text('excerpt')->nullable();
             $table->longText('content');
+            $table->json('sections')->nullable();
+            $table->json('tags')->nullable();       // for hashtags
+            $table->json('tech_stack')->nullable(); // for technology tags
             $table->string('featured_image')->nullable();
             $table->string('category')->nullable();
             $table->timestamp('published_at')->nullable();

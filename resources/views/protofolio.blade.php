@@ -2,21 +2,36 @@
 
 @section('content')
 
-    <section class="relative overflow-x-hidden bg-[#edf2f7]">
+    <section class="relative overflow-hidden min-h-screen bg-[#edf2f7]">
 
-        <!-- Scattered Gradient Shapes -->
-        <div class="absolute -top-32 -left-32 w-[600px] h-[600px] rounded-full blur-3xl" style="background:linear-gradient(135deg, rgba(28,160,216,0.5), rgba(43,182,115,0.4));"></div>
-        <div class="absolute -top-20 -right-20 w-[450px] h-[450px] rounded-full blur-3xl" style="background:linear-gradient(225deg, rgba(28,160,216,0.45), rgba(43,182,115,0.35));"></div>
-        <div class="absolute top-1/3 -left-24 w-[300px] h-[300px] rounded-full blur-3xl" style="background:linear-gradient(135deg, rgba(43,182,115,0.5), rgba(28,160,216,0.4));"></div>
-        <div class="absolute top-1/2 -right-28 w-[500px] h-[500px] rounded-full blur-3xl" style="background:linear-gradient(200deg, rgba(28,160,216,0.5), rgba(43,182,115,0.3));"></div>
-        <div class="absolute -bottom-32 -left-20 w-[550px] h-[550px] rounded-full blur-3xl" style="background:linear-gradient(45deg, rgba(43,182,115,0.5), rgba(28,160,216,0.4));"></div>
-        <div class="absolute -bottom-48 -right-48 w-[700px] h-[700px] rounded-full blur-3xl" style="background:linear-gradient(160deg, rgba(28,160,216,0.6), rgba(43,182,115,0.5));"></div>
-        <div class="absolute top-10 left-1/3 w-[200px] h-[200px] rounded-full blur-3xl" style="background:linear-gradient(90deg, rgba(28,160,216,0.4), rgba(43,182,115,0.3));"></div>
-        <div class="absolute bottom-20 left-2/3 w-[350px] h-[350px] rounded-full blur-3xl" style="background:linear-gradient(270deg, rgba(43,182,115,0.45), rgba(28,160,216,0.35));"></div>
-
+        <div class="absolute -top-32 -left-32 h-[600px] w-[600px] rounded-full blur-3xl opacity-70"
+             style="background:linear-gradient(135deg, rgba(28,160,216,0.5), rgba(43,182,115,0.4));">
+        </div>
+        <div class="absolute -top-20 -right-20 h-[450px] w-[450px] rounded-full blur-3xl opacity-70"
+             style="background:linear-gradient(225deg, rgba(28,160,216,0.45), rgba(43,182,115,0.35));">
+        </div>
+        <div class="absolute top-1/3 -left-24 h-[300px] w-[300px] rounded-full blur-3xl opacity-70"
+             style="background:linear-gradient(135deg, rgba(43,182,115,0.5), rgba(28,160,216,0.4));">
+        </div>
+        <div class="absolute top-1/2 -right-28 h-[500px] w-[500px] rounded-full blur-3xl opacity-70"
+             style="background:linear-gradient(200deg, rgba(28,160,216,0.5), rgba(43,182,115,0.3));">
+        </div>
+        <div class="absolute -bottom-32 -left-20 h-[550px] w-[550px] rounded-full blur-3xl opacity-70"
+             style="background:linear-gradient(45deg, rgba(43,182,115,0.5), rgba(28,160,216,0.4));">
+        </div>
+        <div class="absolute -bottom-48 -right-48 h-[700px] w-[700px] rounded-full blur-3xl opacity-70"
+             style="background:linear-gradient(160deg, rgba(28,160,216,0.6), rgba(43,182,115,0.5));">
+        </div>
+        <div class="absolute top-10 left-1/3 h-[200px] w-[200px] rounded-full blur-3xl opacity-70"
+             style="background:linear-gradient(90deg, rgba(28,160,216,0.4), rgba(43,182,115,0.3));">
+        </div>
+        <div class="absolute bottom-20 left-2/3 h-[350px] w-[350px] rounded-full blur-3xl opacity-70"
+             style="background:linear-gradient(270deg, rgba(43,182,115,0.45), rgba(28,160,216,0.35));">
+        </div>
         <!-- Main Glass Container -->
         <div class="relative z-10 min-h-screen">
             <div class="min-h-[95vh] bg-white/20 backdrop-blur-[40px] border border-white/60 shadow-2xl shadow-slate-300/50">
+                <!-- ==================== HERO SECTION ==================== -->
                 <!-- ==================== HERO SECTION ==================== -->
                 <div class="px-8 lg:px-20 pt-12 lg:pt-20 pb-20">
                     <div class="flex flex-col lg:flex-row lg:items-center gap-12">
@@ -27,9 +42,11 @@
                                 <span class="w-2 h-2 rounded-full bg-green-500"></span>
                                 <span class="text-sm text-slate-700">Software Development • ERP • Web Applications</span>
                             </div>
-                            <h1 class="mt-8 text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.95]">
+                            <h1 class="mt-8 text-4xl lg:text-5xl xl:text-6xl font-bold leading-[0.95]">
                                 Building
-                                <span class="block bg-gradient-to-r h-27 from-[#1ca0d8] to-[#2bb673] bg-clip-text text-transparent">Digital Products</span>
+                                <span class="block bg-gradient-to-r from-[#1ca0d8] to-[#2bb673] bg-clip-text text-transparent">
+            Digital Products
+        </span>
                                 That Businesses Actually Use
                             </h1>
                             <p class="mt-8 max-w-3xl text-xl text-slate-600 leading-relaxed">
@@ -41,24 +58,66 @@
                                 <a href="#portfolio" class="px-8 py-4 rounded-2xl bg-white/30 border border-white/50 backdrop-blur-xl shadow-md hover:shadow-lg transition-shadow">View Our Work</a>
                             </div>
                         </div>
+                        <!-- Right Side: Rotating Halo with Icons -->
+                        <div class="flex-1 flex justify-center lg:justify-end items-center" data-aos="fade-left" data-aos-delay="400">
+                            <div class="rotating-halo w-full max-w-[600px] aspect-square relative mx-auto lg:mx-0">
+                                <!-- Rotating Halo Ring (visible on all screens) -->
+                                <div class="rotating-halo-ring hidden md:flex absolute inset-0 justify-center items-center">
+                                    <div class="rotating-halo-inner w-full h-full rounded-full"></div>
+                                </div>
 
-                        <!-- Right: 3D Floating Icon -->
-                        <div class="flex-1 flex justify-center items-center max-w-lg mx-auto lg:mx-0"
-                             data-aos="fade-left"
-                             data-aos-duration="1000"
-                             data-aos-delay="200">
-                            <div class="relative group">
-                                <div class="w-64 h-64 lg:w-80 lg:h-80 rounded-3xl bg-gradient-to-br from-[#1ca0d8]/20 to-[#2bb673]/20
-                                    backdrop-blur-xl border border-white/50 shadow-2xl
-                                    flex items-center justify-center
-                                    group-hover:rotate-6 group-hover:scale-105 transition-all duration-500">
-                                    <div class="text-8xl lg:text-9xl animate-float">
-                                        🚀
+                                <!-- Scattered Floating Icons with Glassmorphism -->
+                                <div class="floating-icons-container absolute inset-0 pointer-events-none">
+                                    <!-- Python -->
+                                    <div class="floating-icon-item absolute p-2 md:p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg transition-transform hover:scale-110 animate-float" style="top: 5%; left: 15%;">
+                                        <img src="https://www.svgrepo.com/show/452091/python.svg" alt="Python" class="w-8 h-8 md:w-12 md:h-12">
+                                    </div>
+
+                                    <!-- React -->
+                                    <div class="floating-icon-item absolute p-2 md:p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg transition-transform hover:scale-110 animate-float-slow" style="top: 25%; left: 10%;">
+                                        <i class="fab fa-react text-3xl md:text-5xl text-[#61DAFB]"></i>
+                                    </div>
+
+                                    <!-- Node.js -->
+                                    <div class="floating-icon-item absolute p-2 md:p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg transition-transform hover:scale-110 animate-float-faster" style="bottom: 20%; left: 5%;">
+                                        <i class="fab fa-node-js text-3xl md:text-5xl text-[#339933]"></i>
+                                    </div>
+
+                                    <!-- Laravel -->
+                                    <div class="floating-icon-item absolute p-2 md:p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg transition-transform hover:scale-110 animate-float" style="top: 50%; left: 30%;">
+                                        <i class="fa-brands fa-laravel text-3xl md:text-5xl text-[#FF2D20]"></i>
+                                    </div>
+
+                                    <!-- Firebase -->
+                                    <div class="floating-icon-item absolute p-2 md:p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg transition-transform hover:scale-110 animate-float-slow" style="bottom: 5%; right: 20%;">
+                                        <img src="https://www.svgrepo.com/show/373595/firebase.svg" alt="Firebase" class="w-8 h-8 md:w-12 md:h-12">
+                                    </div>
+
+                                    <!-- Flutter -->
+                                    <div class="floating-icon-item absolute p-2 md:p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg transition-transform hover:scale-110 animate-float-faster" style="top: 10%; right: 25%;">
+                                        <img src="https://www.svgrepo.com/show/349363/flutter.svg" alt="Flutter" class="w-8 h-8 md:w-12 md:h-12">
+                                    </div>
+
+                                    <!-- GitHub -->
+                                    <div class="floating-icon-item absolute p-2 md:p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg transition-transform hover:scale-110 animate-float" style="bottom: 15%; left: 50%;">
+                                        <i class="fab fa-github text-3xl md:text-5xl"></i>
+                                    </div>
+
+                                    <!-- Docker -->
+                                    <div class="floating-icon-item absolute p-2 md:p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg transition-transform hover:scale-110 animate-float-slow" style="top: 35%; left: 40%;">
+                                        <i class="fab fa-docker text-3xl md:text-5xl text-[#2496ED]"></i>
+                                    </div>
+
+                                    <!-- Tailwind CSS -->
+                                    <div class="floating-icon-item absolute p-2 md:p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg transition-transform hover:scale-110 animate-float-slow" style="top: 30%; left: 70%;">
+                                        <img src="https://www.svgrepo.com/show/374118/tailwind.svg" alt="Tailwind" class="w-8 h-8 md:w-12 md:h-12">
+                                    </div>
+
+                                    <!-- TypeScript -->
+                                    <div class="floating-icon-item absolute p-2 md:p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg transition-transform hover:scale-110 animate-float-faster" style="bottom: 30%; right: 5%;">
+                                        <i class="fab fa-js-square text-3xl md:text-5xl text-[#007ACC]"></i>
                                     </div>
                                 </div>
-                                <div class="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-[#1ca0d8]/30 backdrop-blur-xl border border-white/50 animate-pulse-slow"></div>
-                                <div class="absolute -bottom-4 -left-4 w-16 h-16 rounded-full bg-[#2bb673]/30 backdrop-blur-xl border border-white/50 animate-pulse-slow animation-delay-200"></div>
-                                <div class="absolute top-1/2 -right-8 w-8 h-8 rounded-full bg-yellow-400/30 backdrop-blur-xl border border-white/50 animate-pulse-slow animation-delay-500"></div>
                             </div>
                         </div>
 
@@ -165,26 +224,25 @@
                         <p class="text-slate-600 max-w-2xl mx-auto mt-4">Tips, trends, and deep dives into web development</p>
                     </div>
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        @php
-                            $blogs = [
-                                ['tag' => 'Technology', 'tagColor' => '#1ca0d8', 'title' => 'Why Glassmorphism is taking over UI design', 'desc' => 'Explore the trend that blends transparency, blur, and vibrant backgrounds.', 'date' => 'June 15, 2026', 'read' => '5 min read'],
-                                ['tag' => 'Development', 'tagColor' => '#2bb673', 'title' => 'Scaling Laravel apps with Redis queues', 'desc' => 'Improve performance and handle background jobs efficiently.', 'date' => 'June 10, 2026', 'read' => '8 min read'],
-                                ['tag' => 'Strategy', 'tagColor' => '#1ca0d8', 'title' => 'ERP vs best‑of‑breed: what\'s right for you?', 'desc' => 'A guide to choosing the right business software ecosystem.', 'date' => 'June 5, 2026', 'read' => '6 min read'],
-                            ];
-                        @endphp
                         @foreach($blogs as $index => $blog)
                             <div class="bg-white/10 backdrop-blur-md rounded-3xl border border-white/50 overflow-hidden shadow-lg hover:shadow-xl transition-all"
                                  data-aos="fade-up"
                                  data-aos-duration="800"
                                  data-aos-delay="{{ $index * 150 }}">
-                                <div class="p-6">
-                                    <div class="text-sm text-[{{ $blog['tagColor'] }}] font-semibold">{{ $blog['tag'] }}</div>
-                                    <h3 class="text-xl font-bold mt-2">{{ $blog['title'] }}</h3>
-                                    <p class="text-slate-600 mt-2">{{ $blog['desc'] }}</p>
-                                    <div class="mt-4 flex items-center gap-2 text-sm text-slate-500">
-                                        <span>{{ $blog['date'] }}</span> • <span>{{ $blog['read'] }}</span>
+                                <a href="{{route('blog.show',['slug'=>$blog->slug])}}">
+                                    <div class="p-6">
+                                        <div class="text-sm font-semibold" style="color: {{ $blog->category_color ?? '#1ca0d8' }}">
+                                            {{ $blog->category }}
+                                        </div>
+                                        <h3 class="text-xl font-bold mt-2">{{ $blog->title }}</h3>
+                                        <p class="text-slate-600 mt-2">{{ $blog->description }}</p>
+                                        <div class="mt-4 flex items-center gap-2 text-sm text-slate-500">
+                                            <span>{{ $blog->formatted_date}}</span>
+                                            • <span>{{ $blog->reading_time ?? '3 min read' }}</span>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
+
                             </div>
                         @endforeach
                     </div>
@@ -399,5 +457,34 @@
             pointer-events: auto;
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the fixed navigation element (adjust selector to match your nav)
+            const nav = document.querySelector('nav.fixed, header.fixed, .navbar-fixed');
+            const navHeight = nav ? nav.offsetHeight : 80; // fallback to 80px
 
+            // Handle all anchor links that start with #
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return; // ignore empty anchor
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault(); // stop default jump
+
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
+
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+
+                        // Update URL hash without causing a jump
+                        history.pushState(null, null, targetId);
+                    }
+                });
+            });
+        });
+    </script>
 @endsection

@@ -12,6 +12,9 @@ class BlogPost extends Model
         'slug',
         'excerpt',
         'content',
+        'sections',
+        'tags',
+        'tech_stack',
         'featured_image',
         'category',
         'published_at',
@@ -21,13 +24,18 @@ class BlogPost extends Model
     protected $casts = [
         'published_at' => 'datetime',
         'is_published' => 'boolean',
+        'sections' => 'array',
+        'tags' => 'array',
+        'tech_stack' => 'array',
     ];
+
 // Scope for published posts
     public function scopePublished($query)
     {
         return $query->where('is_published', true)
             ->where('published_at', '<=', now());
     }
+
 
     // Get the URL for the blog post
     public function getRouteKeyName()
