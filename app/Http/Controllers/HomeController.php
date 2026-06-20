@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\BlogPost;
+use App\Models\Client;
 use App\Models\Contact;
 use App\Models\Project;
 use Illuminate\Http\Request;
@@ -15,6 +16,7 @@ class HomeController extends Controller
     {
         $data['projects']=Project::published()->get();
         $data['blogs']=BlogPost::published()->latest()->take(3)->get();
+        $data['clients']=Client::get();
         return view('protofolio',$data);
     }
 
@@ -40,5 +42,10 @@ class HomeController extends Controller
         return redirect()
             ->back()
             ->with('success', 'Thank you for your message! We\'ll get back to you within 24 hours.');
+    }
+
+    public function aboutUs()
+    {
+        return view('about-us');
     }
 }

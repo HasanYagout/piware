@@ -9,6 +9,7 @@ use Filament\Actions\ViewAction;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Table;
 
 class ClientsTable
@@ -18,8 +19,10 @@ class ClientsTable
         return $table
             ->columns([
                 ImageColumn::make('image')
+                    ->disk('public')
                 ->imageSize(100)
-                ->circular()
+                ->circular(),
+                ToggleColumn::make('status')
             ])
             ->filters([
                 //
