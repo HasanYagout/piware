@@ -14,12 +14,14 @@
 @layer components {
 
 
-
-
     /* Stream animation */
     @keyframes stream {
-        0% { transform: translateX(50%); }
-        100% { transform: translateX(-100%); }
+        0% {
+            transform: translateX(50%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
     }
 
     .animate-stream {
@@ -32,13 +34,19 @@
 
     /* Responsive adjustments */
     @media (max-width: 768px) {
-        .animate-stream { animation-duration: 15s; }
+        .animate-stream {
+            animation-duration: 15s;
+        }
     }
 
     /* Electric arc flicker */
     @keyframes slow-spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
     }
 
     .slow-spin {
@@ -47,8 +55,12 @@
 
     /* Floating animations */
     @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
     }
 }
 

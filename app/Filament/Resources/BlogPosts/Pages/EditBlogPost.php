@@ -13,6 +13,22 @@ class EditBlogPost extends EditRecord
 {
     protected static string $resource = BlogPostResource::class;
 
+    protected function mutateFormDataBeforeFill(array $data): array
+    {
+        foreach ($this->record->getTranslatableAttributes() as $attribute) {
+            $translations = $this->record->getTranslations($attribute);
+
+            $data[$attribute] = $translations['en'] ?? '';
+            $data["{$attribute}_ar"] = $translations['ar'] ?? '';
+
+        }
+
+        return $data;
+    }
+
+
+
+
     protected function handleRecordUpdate(Model $record, array $data): Model
     {
         foreach ($record->getTranslatableAttributes() as $attribute) {

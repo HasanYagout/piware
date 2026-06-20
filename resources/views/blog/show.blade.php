@@ -24,7 +24,7 @@
                     <!-- Blog Header -->
                     <div class="mb-12" data-aos="fade-up">
                         <div class="flex flex-wrap items-center gap-3 mb-4">
-                            <span class="text-sm text-[#1ca0d8] font-semibold bg-[#1ca0d8]/10 px-4 py-1 rounded-full">{{ $post->category }}</span>
+                            <span class="text-sm text-[#1ca0d8] font-semibold bg-[#1ca0d8]/10 px-4 py-1 rounded-full">{{ __($post->category) }}</span>
                             <span class="text-sm text-slate-500">•</span>
                             <span class="text-sm text-slate-500">{{ $post->formatted_date }}</span>
                             <span class="text-sm text-slate-500">•</span>
@@ -60,7 +60,7 @@
 
                     <!-- Dynamic Sections -->
                     <div class="prose prose-lg max-w-none" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                        @foreach($post->sections as $section)
+                        @foreach(json_decode($post->sections) as $section)
                             @switch($section['type'])
                                 @case('heading')
                                     <h2 class="text-2xl font-bold text-slate-800 mt-8">{{ $section['title'] ?? '' }}</h2>

@@ -24,41 +24,58 @@ class ProjectForm
             ->components([
                 Tabs::make('Project Details')
                     ->tabs([
-                        Tab::make('Basic')
+                        Tab::make('En')
+            ->schema([
+                TextInput::make('title')
+                    ->required()
+                    ->maxLength(255),
+                RichEditor::make('description')->required(),
+                FileUpload::make('image')
+                    ->image()
+                    ->disk('public')
+                    ->directory('projects/thumbnails'),
+                TagsInput::make('technologies'),
+                Select::make('type')
+                    ->options(['url' => 'External URL', 'gallery' => 'Image Gallery'])
+                    ->required()
+                    ->live()
+                    ->default('url'),
+
+                TextInput::make('url')
+                    ->url()->maxLength(255)
+                    ->visible(fn (Get $get) => $get('type') === 'url')
+                    ->required(fn (Get $get) => $get('type') === 'url'),
+
+                // Repeater for gallery
+                Repeater::make('images')
+                    ->schema([
+                        FileUpload::make('image')
+                            ->image()
+                            ->directory('projects/galleries')
+                            ->disk('public')
+                            ->required()
+                            ->columnSpanFull(),
+                        Textarea::make('description')
+                            ->rows(2)
+                            ->placeholder('Optional description for this image')
+                            ->maxLength(500),
+                    ])
+                    ->visible(fn (Get $get) => $get('type') === 'gallery')
+                    ->required(fn (Get $get) => $get('type') === 'gallery')
+                    ->minItems(1)
+                    ->addActionLabel('Add another image')
+                    ->itemLabel(fn (array $state): ?string => $state['description'] ?? 'Untitled image')
+                    ->collapsible(),
+            ]),
+                        Tab::make('Ar')
                             ->schema([
-                                TextInput::make('title')
+                                TextInput::make('title_ar')
                                     ->required()
                                     ->maxLength(255),
-                                RichEditor::make('description')->required(),
-                                FileUpload::make('image')
-                                    ->image()
-                                    ->disk('public')
-                                    ->directory('projects/thumbnails'),
-                                TagsInput::make('technologies'),
-                            ]),
-                        Tab::make('Project Type')
-                            ->schema([
-                                Select::make('type')
-                                    ->options(['url' => 'External URL', 'gallery' => 'Image Gallery'])
-                                    ->required()
-                                    ->live()
-                                    ->default('url'),
-
-                                TextInput::make('url')
-                                    ->url()->maxLength(255)
-                                    ->visible(fn (Get $get) => $get('type') === 'url')
-                                    ->required(fn (Get $get) => $get('type') === 'url'),
-
-                                // Repeater for gallery
-                                Repeater::make('images')
+                                RichEditor::make('description_ar')->required(),
+                                Repeater::make('images_ar')
                                     ->schema([
-                                        FileUpload::make('image')
-                                            ->image()
-                                            ->directory('projects/galleries')
-                                            ->disk('public')
-                                            ->required()
-                                            ->columnSpanFull(),
-                                        Textarea::make('description')
+                                        Textarea::make('description_ar')
                                             ->rows(2)
                                             ->placeholder('Optional description for this image')
                                             ->maxLength(500),
@@ -70,6 +87,7 @@ class ProjectForm
                                     ->itemLabel(fn (array $state): ?string => $state['description'] ?? 'Untitled image')
                                     ->collapsible(),
                             ]),
+
                     ])->columnSpanFull(),
             ]);
     }

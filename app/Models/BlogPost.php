@@ -27,7 +27,7 @@ class BlogPost extends Model
     protected $casts = [
         'published_at' => 'datetime',
         'is_published' => 'boolean',
-        'sections' => 'array',
+//        'sections' => 'array',
         'tags' => 'array',
         'tech_stack' => 'array',
     ];

@@ -264,10 +264,10 @@
                                 <a href="{{route('blog.show',['slug'=>$blog->slug])}}">
                                     <div class="p-6">
                                         <div class="text-sm font-semibold" style="color: {{ $blog->category_color ?? '#1ca0d8' }}">
-                                            {{ $blog->category }}
+                                            {{ __($blog->category) }}
                                         </div>
-                                        <h3 class="text-xl font-bold mt-2">{{ $blog->title }}</h3>
-                                        <p class="text-slate-600 mt-2">{{ $blog->description }}</p>
+                                        <h3 class="text-xl font-bold mt-2">{{ __($blog->title) }}</h3>
+                                        <p class="text-slate-600 mt-2">{{ __($blog->description) }}</p>
                                         <div class="mt-4 flex items-center gap-2 text-sm text-slate-500">
                                             <span>{{ $blog->formatted_date}}</span>
                                             • <span>{{ $blog->reading_time ?? '3 min read' }}</span>
