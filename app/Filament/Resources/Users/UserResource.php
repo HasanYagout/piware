@@ -44,7 +44,7 @@ class UserResource extends Resource
 
     public static function getNavigationBadgeColor(): string|array|null
     {
-        return static::getModel()::where('is_active', false)->count() > 0
+        return static::getModel()::count() > 0
             ? 'warning'
             : 'success';
     }
@@ -59,7 +59,6 @@ class UserResource extends Resource
         return [
             'Email' => $record->email,
             'Role' => ucfirst($record->role),
-            'Status' => $record->is_active ? 'Active' : 'Inactive',
         ];
     }
 

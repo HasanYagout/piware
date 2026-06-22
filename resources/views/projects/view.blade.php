@@ -112,7 +112,7 @@
         function updateLightbox() {
             const item = galleryItems[currentIndex];
             // Build the full image URL (assuming public disk)
-            const imageUrl = item.image ? '{{ Storage::url('') }}' + item.image : '';
+            const imageUrl = item.image ? item.image : '';
             document.getElementById('lightboxImage').src = imageUrl;
             document.getElementById('lightboxDescription').innerText = item.description || 'No description';
             document.getElementById('lightboxCounter').innerText = `${currentIndex+1} / ${galleryItems.length}`;

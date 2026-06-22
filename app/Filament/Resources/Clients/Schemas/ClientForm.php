@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Clients\Schemas;
 
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Toggle;
@@ -18,6 +19,7 @@ class ClientForm
                     ->directory('clients')
                     ->disk('public')
                     ->required(),
+
             ]);
     }
 }

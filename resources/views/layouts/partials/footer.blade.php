@@ -20,7 +20,7 @@
                 <div class="relative inline-block group">
                     <!-- 3D Floating Logo Container -->
                     <div class="relative perspective-500">
-                        <img src="{{ asset('logo.png') }}" alt="PiWare"
+                        <img src="{{ asset('logo.png') }}" alt="{{ __('PiWare') }}"
                              class="w-24 h-24 object-contain drop-shadow-md transition-all duration-500
                                     group-hover:scale-110 group-hover:rotate-6
                                     group-hover:shadow-2xl group-hover:shadow-[#1ca0d8]/30
@@ -39,8 +39,8 @@
                 </div>
 
                 <p class="text-sm text-slate-600 leading-relaxed max-w-sm">
-                    Building digital products that businesses actually use.
-                    Enterprise systems, dashboards, and scalable platforms.
+                    {{ __('Building digital products that businesses actually use.') }}
+                    {{ __('Enterprise systems, dashboards, and scalable platforms.') }}
                 </p>
 
                 <div class="flex items-center gap-3 pt-2">
@@ -48,11 +48,11 @@
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                     </span>
-                    <span class="text-xs text-slate-500 font-medium">Available for projects</span>
+                    <span class="text-xs text-slate-500 font-medium">{{ __('Available for projects') }}</span>
                     <span class="text-xs text-slate-300">•</span>
                     <span class="text-xs text-[#1ca0d8] font-medium flex items-center gap-1">
                         <span class="inline-block animate-bounce">⚡</span>
-                        Ready to build
+                        {{ __('Ready to build') }}
                     </span>
                 </div>
             </div>
@@ -64,34 +64,34 @@
                 <div>
                     <h4 class="text-sm font-semibold text-slate-700 uppercase tracking-wider mb-4 flex items-center gap-2">
                         <span class="w-1 h-4 bg-gradient-to-b from-[#1ca0d8] to-[#2bb673] rounded-full"></span>
-                        Quick Links
+                        {{ __('Quick Links') }}
                     </h4>
                     <ul class="space-y-3">
                         <li>
                             <a href="#portfolio" class="text-sm text-slate-600 hover:text-[#1ca0d8] transition-all duration-300 flex items-center gap-2 group">
                                 <span class="text-[#1ca0d8] opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0">→</span>
-                                Portfolio
+                                {{ __('Portfolio') }}
                                 <span class="text-xs text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity">✦</span>
                             </a>
                         </li>
                         <li>
                             <a href="#services" class="text-sm text-slate-600 hover:text-[#2bb673] transition-all duration-300 flex items-center gap-2 group">
                                 <span class="text-[#2bb673] opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0">→</span>
-                                Services
+                                {{ __('Services') }}
                                 <span class="text-xs text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity">✦</span>
                             </a>
                         </li>
                         <li>
                             <a href="#blog" class="text-sm text-slate-600 hover:text-[#1ca0d8] transition-all duration-300 flex items-center gap-2 group">
                                 <span class="text-[#1ca0d8] opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0">→</span>
-                                Blog
+                                {{ __('Blog') }}
                                 <span class="text-xs text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity">✦</span>
                             </a>
                         </li>
                         <li>
                             <a href="#contact" class="text-sm text-slate-600 hover:text-[#2bb673] transition-all duration-300 flex items-center gap-2 group">
                                 <span class="text-[#2bb673] opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0">→</span>
-                                Contact
+                                {{ __('Contact') }}
                                 <span class="text-xs text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity">✦</span>
                             </a>
                         </li>
@@ -102,7 +102,7 @@
                 <div>
                     <h4 class="text-sm font-semibold text-slate-700 uppercase tracking-wider mb-4 flex items-center gap-2">
                         <span class="w-1 h-4 bg-gradient-to-b from-[#2bb673] to-[#1ca0d8] rounded-full"></span>
-                        Connect
+                        {{ __('Connect') }}
                     </h4>
                     <ul class="space-y-3">
                         <li class="flex items-center gap-3 text-sm text-slate-600 group">
@@ -119,7 +119,7 @@
                         </li>
                         <li class="flex items-center gap-3 text-sm text-slate-600 group">
                             <span class="text-xl transition-all duration-300 group-hover:scale-125 group-hover:translate-y-[-2px]">📍</span>
-                            <span class="group-hover:translate-x-1 inline-block transition-transform duration-300">Al Balad Al Amin St — Al Jami'ah District Makkah Al Mukarramah Region 24243 - 6910</span>
+                            <span class="group-hover:translate-x-1 inline-block transition-transform duration-300">{{ __('Al Balad Al Amin St — Al Jami\'ah District Makkah Al Mukarramah Region 24243 - 6910') }}</span>
                         </li>
                     </ul>
 
@@ -133,11 +133,11 @@
               hover:shadow-xl hover:shadow-[#1ca0d8]/30
               transition-all duration-300 group transform-gpu"
                            style="transform-style: preserve-3d;"
-                           aria-label="Twitter">
+                           aria-label="{{ __('Twitter') }}">
                             <svg class="w-5 h-5 fill-current group-hover:rotate-12 transition-transform duration-300" viewBox="0 0 24 24">
                                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                             </svg>
-                            <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-[10px] bg-slate-800 text-white px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Twitter</span>
+                            <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-[10px] bg-slate-800 text-white px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">{{ __('Twitter') }}</span>
                             <span class="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                                   style="background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, transparent 50%);"></span>
                         </a>
@@ -150,11 +150,11 @@
               hover:shadow-xl hover:shadow-[#0A66C2]/30
               transition-all duration-300 group transform-gpu"
                            style="transform-style: preserve-3d;"
-                           aria-label="LinkedIn">
+                           aria-label="{{ __('LinkedIn') }}">
                             <svg class="w-5 h-5 fill-current group-hover:-rotate-12 transition-transform duration-300" viewBox="0 0 24 24">
                                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                             </svg>
-                            <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-[10px] bg-slate-800 text-white px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">LinkedIn</span>
+                            <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-[10px] bg-slate-800 text-white px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">{{ __('LinkedIn') }}</span>
                             <span class="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                                   style="background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, transparent 50%);"></span>
                         </a>
@@ -167,11 +167,11 @@
               hover:shadow-xl hover:shadow-[#E4405F]/30
               transition-all duration-300 group transform-gpu"
                            style="transform-style: preserve-3d;"
-                           aria-label="Instagram">
+                           aria-label="{{ __('Instagram') }}">
                             <svg class="w-5 h-5 fill-current group-hover:rotate-12 transition-transform duration-300" viewBox="0 0 24 24">
                                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                             </svg>
-                            <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-[10px] bg-slate-800 text-white px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Instagram</span>
+                            <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-[10px] bg-slate-800 text-white px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">{{ __('Instagram') }}</span>
                             <span class="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                                   style="background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, transparent 50%);"></span>
                         </a>
@@ -184,11 +184,11 @@
               hover:shadow-xl hover:shadow-[#1877F2]/30
               transition-all duration-300 group transform-gpu"
                            style="transform-style: preserve-3d;"
-                           aria-label="Facebook">
+                           aria-label="{{ __('Facebook') }}">
                             <svg class="w-5 h-5 fill-current group-hover:-rotate-12 transition-transform duration-300" viewBox="0 0 24 24">
                                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                             </svg>
-                            <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-[10px] bg-slate-800 text-white px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Facebook</span>
+                            <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-[10px] bg-slate-800 text-white px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">{{ __('Facebook') }}</span>
                             <span class="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                                   style="background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, transparent 50%);"></span>
                         </a>
@@ -219,7 +219,7 @@
             </span>
             <span class="text-slate-300 mx-2">•</span>
             <span class="text-xs text-transparent bg-clip-text bg-gradient-to-r from-[#1ca0d8] to-[#2bb673] animate-pulse">
-                ✦ Innovating since 2025 ✦
+                ✦ {{ __('Innovating since 2025') }} ✦
             </span>
         </div>
 

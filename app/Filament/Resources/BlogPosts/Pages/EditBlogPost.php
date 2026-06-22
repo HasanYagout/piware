@@ -42,6 +42,7 @@ class EditBlogPost extends EditRecord
         $record->fill($data);
         $record->save();
 
+
         return $record;
     }
 

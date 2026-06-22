@@ -109,18 +109,6 @@
                     </span>
                     <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#2bb673] to-[#1ca0d8] transition-all duration-300 group-hover:w-full"></span>
                 </a>
-                <a href="#clients" class="relative text-slate-700 hover:text-[#1ca0d8] transition font-medium group">
-                    <span class="flex items-center gap-2">
-                        {{ __('Clients') }}
-                    </span>
-                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#1ca0d8] to-[#2bb673] transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="#contact" class="relative text-slate-700 hover:text-[#2bb673] transition font-medium group">
-                    <span class="flex items-center gap-2">
-                        {{ __('Contact') }}
-                    </span>
-                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#2bb673] to-[#1ca0d8] transition-all duration-300 group-hover:w-full"></span>
-                </a>
             </div>
         </div>
 
@@ -187,12 +175,6 @@
             </a>
             <a href="{{route('blog.index')}}" class="flex items-center gap-3 hover:text-[#2bb673] transition font-medium hover:translate-x-2 duration-300 group">
                 {{ __('Blogs') }}
-            </a>
-            <a href="#clients" class="flex items-center gap-3 hover:text-[#1ca0d8] transition font-medium hover:translate-x-2 duration-300 group">
-                {{ __('Clients') }}
-            </a>
-            <a href="#contact" class="flex items-center gap-3 hover:text-[#2bb673] transition font-medium hover:translate-x-2 duration-300 group">
-                {{ __('Contact') }}
             </a>
 
             <!-- Animated Divider -->

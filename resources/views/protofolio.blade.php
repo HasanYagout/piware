@@ -161,14 +161,14 @@
                     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                         @php
                             $services = [
-                                ['icon' => '💻', 'title' => 'Software Development'],
-                                ['icon' => '🌐', 'title' => 'Web Applications'],
-                                ['icon' => '📱', 'title' => 'Mobile Applications'],
-                                ['icon' => '☁️', 'title' => 'Infrastructure Solutions'],
-                                ['icon' => '🔒', 'title' => 'Cybersecurity'],
-                                ['icon' => '🛠️', 'title' => 'Managed Services'],
-                                ['icon' => '🔄', 'title' => 'Digital Transformation'],
-                                ['icon' => '⚡', 'title' => 'Systems Integration'],
+                                [ 'title' => 'Software Development'],
+                                [ 'title' => 'Web Applications'],
+                                [ 'title' => 'Mobile Applications'],
+                                ['title' => 'Infrastructure Solutions'],
+                                [ 'title' => 'Cybersecurity'],
+                                [ 'title' => 'Managed Services'],
+                                [ 'title' => 'Digital Transformation'],
+                                ['title' => 'Systems Integration'],
                             ];
                         @endphp
                         @foreach($services as $index => $service)
@@ -177,11 +177,6 @@
                                 data-aos="flip-up"
                                 data-aos-duration="800"
                                 data-aos-delay="{{ $index * 100 }}">
-
-                                <div class="text-5xl mb-5 group-hover:scale-110 transition-transform duration-300">
-                                    {{ $service['icon'] }}
-                                </div>
-
                                 <h3 class="font-bold text-xl text-slate-800">
                                     {{ $service['title'] }}
                                 </h3>
@@ -192,7 +187,7 @@
                 </div>
 
                 <!-- ==================== CLIENTS SECTION ==================== -->
-                <div class="px-8 lg:px-20 py-20 border-t border-white/30 overflow-hidden">
+                <div id="clients" class="px-8 lg:px-20 py-20 border-t border-white/30 overflow-hidden">
                     <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="800">
                         <span class="text-sm uppercase tracking-wider text-slate-600 bg-white/30 px-4 py-1 rounded-full">Trusted by</span>
                         <h2 class="text-4xl lg:text-5xl font-bold mt-4 bg-gradient-to-r from-[#1ca0d8] to-[#2bb673] bg-clip-text text-transparent">Our Clients</h2>
@@ -279,7 +274,7 @@
                         @endforeach
                     </div>
                     <div class="text-center mt-12" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
-                        <a href="#" class="inline-block px-8 py-3 rounded-full bg-white/30 border border-white/50 backdrop-blur-xl shadow-md hover:shadow-lg transition-all">View all posts →</a>
+                        <a href="{{route('blog.index')}}" class="inline-block px-8 py-3 rounded-full bg-white/30 border border-white/50 backdrop-blur-xl shadow-md hover:shadow-lg transition-all">View all posts →</a>
                     </div>
                 </div>
 

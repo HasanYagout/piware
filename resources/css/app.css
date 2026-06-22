@@ -14,14 +14,12 @@
 @layer components {
 
 
+
+
     /* Stream animation */
     @keyframes stream {
-        0% {
-            transform: translateX(50%);
-        }
-        100% {
-            transform: translateX(-100%);
-        }
+        0% { transform: translateX(50%); }
+        100% { transform: translateX(-100%); }
     }
 
     .animate-stream {
@@ -34,19 +32,13 @@
 
     /* Responsive adjustments */
     @media (max-width: 768px) {
-        .animate-stream {
-            animation-duration: 15s;
-        }
+        .animate-stream { animation-duration: 15s; }
     }
 
     /* Electric arc flicker */
     @keyframes slow-spin {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(360deg);
-        }
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
     }
 
     .slow-spin {
@@ -55,12 +47,87 @@
 
     /* Floating animations */
     @keyframes float {
-        0%, 100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-10px);
-        }
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+
+    @keyframes float-slow {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+    }
+
+    @keyframes float-faster {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-12px); }
+    }
+
+    .animate-float { animation: float 6s ease-in-out infinite; }
+    .animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
+    .animate-float-faster { animation: float-faster 5s ease-in-out infinite; }
+
+    /* Gradient text animation */
+    @keyframes gradient-x {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    .animate-gradient-x {
+        background-size: 200% 200%;
+        animation: gradient-x 3s ease infinite;
+    }
+
+
+
+
+
+
+
+
+
+    /* Rotating halo fix */
+    .rotating-halo {
+        position: relative;
+        width: 600px;
+        height: 600px;
+    }
+
+    .rotating-halo-ring {
+        padding: 10px;
+        background: linear-gradient(to right, #00e6cc, #0099ff, #ff00ff);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        border-radius: 50%;
+        animation: slow-spin 20s linear infinite;
+    }
+
+    .rotating-halo-inner {
+        background: white;
+        border-radius: 50%;
+    }
+    .rotating-halo-ring {
+        width: 100%;
+        height: 100%;
+    }
+    /* Floating icons container */
+    .floating-icons-container {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+    }
+
+    .floating-icon-item {
+        position: absolute;
+        padding: 1.5rem;
+        border-radius: 50%;
+        background: #071426;
+        border: 1px solid rgba(255,255,255,0.1);
+        transition: transform 0.3s;
+    }
+
+    .floating-icon-item:hover {
+        transform: scale(1.1);
     }
 }
-

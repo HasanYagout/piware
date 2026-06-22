@@ -38,8 +38,8 @@
                             <div class="flex items-center gap-3">
                                 <div class="w-12 h-12 rounded-full bg-gradient-to-r from-[#1ca0d8] to-[#2bb673] flex items-center justify-center text-white text-xl font-bold">PW</div>
                                 <div>
-                                    <p class="font-semibold text-slate-800">PiWare Team</p>
-                                    <p class="text-sm text-slate-500">Development Team</p>
+                                    <p class="font-semibold text-slate-800">PiWare</p>
+                                    <p class="text-sm text-slate-500">{{__('Development Team')}}</p>
                                 </div>
                             </div>
                         </div>
@@ -58,9 +58,10 @@
                         </div>
                     @endif
 
+
                     <!-- Dynamic Sections -->
                     <div class="prose prose-lg max-w-none" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                        @foreach(json_decode($post->sections) as $section)
+                        @foreach($post->sections as $section)
                             @switch($section['type'])
                                 @case('heading')
                                     <h2 class="text-2xl font-bold text-slate-800 mt-8">{{ $section['title'] ?? '' }}</h2>
